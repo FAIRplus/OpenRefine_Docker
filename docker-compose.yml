@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+
+  docker-openrefine:
+    image: docker-openrefine:1.0
+    container_name: docker-openrefine
+    network_mode: host
+    volumes:
+      - ./data:/or/data
+      - ./workspace-files:/or/files
+    ports:
+      - 3333:3333
